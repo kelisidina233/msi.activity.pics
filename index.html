@@ -14,7 +14,27 @@
         content="target-densitydpi=device-dpi, width=device-width,height=device-height, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0,shrink-to-fit=no">
   <meta name="format-detection" content="telephone=no">
   <!--em标准js代码，请放在页面的最上方，前面最好不要再有JS代码或JS文件-->
-  <script type="text/javascript" src="./rem.js"></script>
+  <script type="text/javascript">
+     
+function getRem(pwidth,prem){
+	var html = document.getElementsByTagName("html")[0];
+	var oWidth = window.innerWidth;	
+	html.style.fontSize = oWidth/pwidth*prem + "px";		
+	if(!/iphone|ipad|ipod|android.*mobile|windows.*phone|blackberry.*mobile/i.test(window.navigator.userAgent.toLowerCase())){	//pc端居中显示
+		
+		html.style.width="750px";
+		html.style["margin"] = "0 auto";	
+		html.style.fontSize="100px";
+	}
+}
+
+getRem(750,100);
+/*750代表设计师给的设计稿的宽度，你的设计稿是多少，就写多少;100代表换算比例，这里写100是
+为了以后好算,比如，你测量的一个宽度是100px,就可以写为1rem,以及1px=0.01rem等等*/
+window.onresize = function(){
+getRem(750,100);
+};
+  </script>
   <script type="text/javascript" src="https://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
   <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/vant/2.12.33/vant.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/vant/2.12.33/index.min.css">
