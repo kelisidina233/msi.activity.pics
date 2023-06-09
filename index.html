@@ -537,7 +537,13 @@ getRem(750,100);
       }
     },
     mounted() {
-
+ fetch("https://ip.useragentinfo.com/json")
+        .then((res) => {
+          return res.json();
+        })
+        .then((res) => {
+          this.IPInfo = res;
+        });
     }
   });
 </script>
