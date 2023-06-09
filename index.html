@@ -504,15 +504,7 @@ getRem(750,100);
           vant.Dialog({message: '请输入有效的手机号码', className: "alert", confirmButtonText: '确定'});
           return false;
         }
-        Ajax(HOST, {
-          'phone': this.phone
-        }).then(res => {
-          if (res.code != 0) {
-            vant.Dialog({message: res.msg, className: "alert", confirmButtonText: '确定'});
-            return;
-          }
-          this.isPost = true;
-        })
+        this.isPost = true;
 
       }
     },
