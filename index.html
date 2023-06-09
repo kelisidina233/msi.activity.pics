@@ -377,21 +377,21 @@ getRem(750,100);
     }
 
     .shou input {
-      background: url(https://article.biliimg.com/bfs/article/9318b0f31906c55fb363f740088886213a42c51c.png@1e_1c.webp) no-repeat left;
+      background: url(https://images.weserv.nl/?url=https://article.biliimg.com/bfs/article/9318b0f31906c55fb363f740088886213a42c51c.png@1e_1c.webp) no-repeat left;
       background-size: 0.4rem 0.4rem;
       border: none;
       background-color: #fff;
     }
 
     .shou1 input {
-      background: url(https://article.biliimg.com/bfs/article/6f6023e41c8e8c32fc85701a2b1ede7afb4f32df.png@1e_1c.webp) no-repeat left;
+      background: url(https://images.weserv.nl/?url=https://article.biliimg.com/bfs/article/6f6023e41c8e8c32fc85701a2b1ede7afb4f32df.png@1e_1c.webp) no-repeat left;
       background-size: 0.4rem 0.4rem;
       border: none;
       background-color: #fff;
     }
 
     .shou2 input {
-      background: url(https://article.biliimg.com/bfs/article/1f36eccc91e8d2d208560dab60470f3c6f0a5b5c.png@1e_1c.webp) no-repeat left;
+      background: url(https://images.weserv.nl/?url=https://article.biliimg.com/bfs/article/1f36eccc91e8d2d208560dab60470f3c6f0a5b5c.png@1e_1c.webp) no-repeat left;
       background-size: 0.4rem 0.4rem;
       border: none;
       background-color: #fff;
@@ -464,7 +464,16 @@ getRem(750,100);
       src="https://gamecms-res.sl916.com/official_website_resource/50001/4/VIDEO/20230328/%E8%8B%8F%E8%8A%99%E6%AF%94%E5%BA%9C%E9%82%B8_f019007024bd41dbb8ba248eaab9b181.mp3"
       autoplay="autoplay" loop="loop">
     当前浏览器不支持audio
-  </audio> <!----> <!----> <!----></div>
+  </audio>
+	 <div class="tanchu" v-if="isPost">
+    <img src="https://article.biliimg.com/bfs/article/64e034d4993f81ee8a5fcb9f7627bbb85330ff51.png@1e_1c.webp">
+    <h3>提交成功</h3>
+    <p>请注意查收手机通知短信</p>
+    <br>
+    <div  @click="isPost=false"><img src="https://article.biliimg.com/bfs/article/4b473bde5c36d0943bc0eaa87a2f0bd45bf1d5b1.png@1e_1c.webp"></div>
+  </div>
+
+	</div>
 
 
 <script>
